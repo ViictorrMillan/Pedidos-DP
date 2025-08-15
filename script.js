@@ -3,18 +3,27 @@ const nav = document.querySelector('header nav');
 
 hamburger.addEventListener('click', () => {
   if (nav.classList.contains('active')) {
-    nav.classList.remove('active');
     nav.classList.add('closing');
-    setTimeout(() => {
+    nav.classList.remove('active');
+
+    nav.addEventListener('animationend', function handler() {
       nav.classList.remove('closing');
       nav.style.display = 'none';
-    }, 300); // tempo igual ao da animação
+      nav.removeEventListener('animationend', handler);
+    });
   } else {
     nav.style.display = 'flex';
     nav.classList.add('active');
   }
 });
 
+// Reseta o menu ao redimensionar a tela
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    nav.style.display = '';
+    nav.classList.remove('active', 'closing');
+  }
+});
 
 
 // Validação: placeholder vermelho
