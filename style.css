@@ -421,7 +421,7 @@ header {
   grid-template-columns: 250px auto 250px; 
   align-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .header-left {
@@ -431,9 +431,8 @@ header {
 }
 
 .header-left .logo {
-  height: 60px;
+  height: 150px;
   margin-right: 20px;
-  filter: drop-shadow(0 2px 6px rgba(255, 164, 92, 0.7));
 }
 
 .header-center {
@@ -445,7 +444,8 @@ header {
   font-size: 35px;
   text-align: center;
   white-space: nowrap;
-  color: #ffb466;
+  letter-spacing: 1.4px;
+  color: #fff;
   text-shadow: 0 2px 8px rgba(255,180,102,0.5);
 }
 
@@ -456,7 +456,7 @@ header {
 }
 
 .header-right nav a {
-  color: #ffa45c;
+  color: #fff;
   margin-left: 20px;
   padding: 8px 16px;
   border-radius: 8px;
@@ -484,7 +484,7 @@ header {
 }
 
 .header-right nav a:hover {
-  color: #fff;
+  color: #ffa45c;
   transform: translateY(-2px);
   text-shadow: 0 0 10px #ffb466;
 }
@@ -635,6 +635,7 @@ select.error::placeholder {
   padding: 16px;
   background: linear-gradient(90deg, #ff9d5c, #ff8b30);
   color: #1b1b1b;
+  letter-spacing: 1.2px;
   border: none;
   border-radius: 10px;
   font-size: 18px;
@@ -668,7 +669,7 @@ footer {
 }
 
 /* ================== RESPONSIVO MOBILE ================== */
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   html, body {
     overflow: auto;
     height: auto;
@@ -681,7 +682,7 @@ footer {
   .header-container {
     display: flex;
     justify-content: center;
-    gap : 20px;
+    gap : 15px;
     width: 100%;
   }
 
@@ -691,7 +692,9 @@ footer {
 
   .header-left .logo {
     display: block;
+    height: 80px;
     margin: 0;
+    padding: 0;
   }
 
   .marcas {
@@ -702,7 +705,7 @@ footer {
   }
 
   .marcas-container img {
-    height: 60px;
+    height: 70px;
   }
 
   .dados-pessoais {
