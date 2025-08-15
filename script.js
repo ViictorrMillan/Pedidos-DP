@@ -1,9 +1,21 @@
-// Menu mobile
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('main-nav');
-if (hamburger) {
-  hamburger.addEventListener('click', () => nav.classList.toggle('active'));
-}
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('header nav');
+
+hamburger.addEventListener('click', () => {
+  if (nav.classList.contains('active')) {
+    nav.classList.remove('active');
+    nav.classList.add('closing');
+    setTimeout(() => {
+      nav.classList.remove('closing');
+      nav.style.display = 'none';
+    }, 300); // tempo igual ao da animação
+  } else {
+    nav.style.display = 'flex';
+    nav.classList.add('active');
+  }
+});
+
+
 
 // Validação: placeholder vermelho
 document.getElementById('form-dados').addEventListener('submit', function(e){
@@ -63,3 +75,5 @@ function animate() {
 }
 
 animate();
+
+
