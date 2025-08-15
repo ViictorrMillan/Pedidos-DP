@@ -19,7 +19,7 @@ hamburger.addEventListener('click', () => {
 
 // Reseta o menu ao redimensionar a tela
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 800) {
     nav.style.display = '';
     nav.classList.remove('active', 'closing');
   }

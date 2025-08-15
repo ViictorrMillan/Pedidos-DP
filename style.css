@@ -28,15 +28,32 @@ header {
 }
 
 .header-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 250px auto 250px; 
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   max-width: 800px;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+}
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .header-left .logo {
-  height: 55px;
+  height: 60px;
   margin-right: 20px;
 }
 
@@ -226,7 +243,7 @@ footer {
 }
 
 /* ================== RESPONSIVO MOBILE ================== */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   html, body {
     overflow: auto;
     height: auto;
@@ -236,13 +253,20 @@ footer {
     position: relative;
     height: 80px;
   }
+  .header-container {
+    display: flex;
+    justify-content: center;
+    gap : 20px;
+    width: 100%;
+  }
 
   .header-center h1 {
     font-size: 22px;
   }
 
   .header-left .logo {
-    display: none;
+    display: block;
+    margin: 0;
   }
 
   .marcas {
