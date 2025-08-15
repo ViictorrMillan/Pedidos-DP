@@ -384,36 +384,84 @@ footer {
 
 
 
-/* ================== DARK ULTRA PREMIUM ================== */
+/* ================== RESET ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Fundo geral */
 html, body {
-  background-color: #121212;
-  color: #e0e0e0;
   font-family: 'Segoe UI', sans-serif;
   overflow: auto;
   height: auto;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-/* Header */
+/* ================== HEADER ================== */
 header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
   background: linear-gradient(90deg, #1a1a1a, #222);
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 0 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.7);
 }
 
+.header-container {
+  display: grid;
+  grid-template-columns: 250px auto 250px; 
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header-left .logo {
+  height: 60px;
+  margin-right: 20px;
   filter: drop-shadow(0 2px 6px rgba(255, 164, 92, 0.7));
 }
 
+.header-center {
+  display: flex;
+  justify-content: center;
+}
+
 .header-center h1 {
+  font-size: 28px;
+  text-align: center;
+  white-space: nowrap;
   color: #ffb466;
   text-shadow: 0 2px 8px rgba(255,180,102,0.5);
 }
 
-/* Header links hover com linha embaixo e glow */
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header-right nav a {
   color: #ffa45c;
+  margin-left: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -440,16 +488,41 @@ header {
   text-shadow: 0 0 10px #ffb466;
 }
 
-/* Slider dark */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ================== SLIDER ================== */
 .marcas {
+  position: relative;
+  top: auto;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 90;
   background: #1c1c1c;
   border-radius: 14px;
   box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+  margin: 20px auto;
+}
+
+.marcas-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap;
 }
 
 .marcas-container img {
-  border-radius: 10px;
+  height: 80px;
+  flex-shrink: 0;
+  cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
   padding: 15px;
 }
 
@@ -457,25 +530,54 @@ header {
   transform: scale(1.1);
 }
 
-/* Form dark */
+/* ================== FORMULÁRIO CENTRAL ================== */
 .dados-pessoais {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin: 20px auto 40px auto;
   background: #1b1b1b;
   border: 2px solid #ffa45c;
-  color: #e0e0e0;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  z-index: 100;
 }
 
 .dados-pessoais h2 {
+  margin-bottom: 25px;
   color: #ffa45c;
+  text-align: center;
+  font-size: 26px;
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
 .input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
   color: #ddd;
 }
 
 .input-group input,
 .input-group select {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
   background-color: #232323;
   color: #e0e0e0;
   border: 1px solid #444;
@@ -489,10 +591,53 @@ header {
   outline: none;
 }
 
-/* Botão dark premium */
+.endereco-numero {
+  display: flex;
+  gap: 10px;
+}
+
+.endereco-numero .numero {
+  max-width: 80px;
+}
+
+/* Estilo de erro para inputs */
+input.error,
+select.error {
+  border: 2px solid #e74c3c;      
+  background-color: #ffe6e6;       
+  animation: pulse 1s infinite, shake 0.3s; 
+}
+
+input.error::placeholder,
+select.error::placeholder {
+  color: #e74c3c;                  
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+  50% { box-shadow: 0 0 10px 4px rgba(231, 76, 60, 0.5); }
+  100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+}
+
+/* ================== BOTÃO ================== */
 .btn-next {
+  width: 100%;
+  padding: 16px;
   background: linear-gradient(90deg, #ff9d5c, #ff8b30);
   color: #1b1b1b;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
   box-shadow: 0 6px 18px rgba(255,180,102,0.4);
   transition: all 0.3s;
 }
@@ -503,21 +648,157 @@ header {
   box-shadow: 0 10px 22px rgba(255,180,102,0.6);
 }
 
-/* Footer dark */
+/* ================== FOOTER ================== */
 footer {
+  height: 80px;
   background: #1c1c1c;
   color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0;
   box-shadow: 0 -4px 18px rgba(0,0,0,0.7);
   border-top: 1px solid #333;
 }
 
+/* ================== RESPONSIVO MOBILE ================== */
+@media (max-width: 800px) {
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
 
+  header {
+    position: relative;
+    height: 80px;
+  }
+  .header-container {
+    display: flex;
+    justify-content: center;
+    gap : 20px;
+    width: 100%;
+  }
 
+  .header-center h1 {
+    font-size: 22px;
+  }
+
+  .header-left .logo {
+    display: block;
+    margin: 0;
+  }
+
+  .marcas {
+    position: relative;
+    top: auto;
+    height: 80px;
+    margin: 20px auto;
+  }
+
+  .marcas-container img {
+    height: 60px;
+  }
+
+  .dados-pessoais {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto 40px auto;
+    width: 95%;
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .dados-pessoais h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn-next {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  footer {
+    position: relative;
+    height: 60px;
+    margin-bottom: 0px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  footer {
+    position: relative;
+  }
+}
+
+/* ================== MENU MOBILE HAMBURGER ================== */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+    background: linear-gradient(90deg, #1a1a1a, #222);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 12px 0;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  header nav.active {
+    display: flex;
+    animation: fadeSlideIn 0.3s ease forwards;
+  }
+
+  header nav.closing {
+    animation: fadeSlideOut 0.3s ease forwards;
+  }
+
+  header nav a {
+     background: rgb(0, 0, 0, 0.1);
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ================== INPUT AUTOFILL DARK ================== */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px #232323 inset; /* mesmo background do input */
-    -webkit-text-fill-color: #e0e0e0; /* cor do texto */
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0px 1000px #232323 inset;
+  -webkit-text-fill-color: #e0e0e0;
+  transition: background-color 5000s ease-in-out 0s;
 }
