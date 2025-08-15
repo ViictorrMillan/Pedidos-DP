@@ -607,7 +607,7 @@ header {
 input.error,
 select.error {
   border: 2px solid #e74c3c;      
-  background-color: #ffe6e6;       
+  background-color: #000000;       
   animation: pulse 1s infinite, shake 0.3s; 
 }
 
