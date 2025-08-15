@@ -442,7 +442,7 @@ header {
 }
 
 .header-center h1 {
-  font-size: 28px;
+  font-size: 35px;
   text-align: center;
   white-space: nowrap;
   color: #ffb466;
@@ -464,6 +464,7 @@ header {
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
+  font-size: 18px;
 }
 
 .header-right nav a::after {
@@ -518,7 +519,7 @@ header {
 }
 
 .marcas-container img {
-  height: 80px;
+  max-height: 80px;
   flex-shrink: 0;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;

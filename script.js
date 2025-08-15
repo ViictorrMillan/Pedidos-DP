@@ -62,23 +62,22 @@ document.getElementById('form-dados').addEventListener('submit', function(e){
   if (ok) alert('Formulário válido! Próxima etapa...');
 });
 
-
-// Slider
 const container = document.querySelector('.marcas-container');
 const images = Array.from(container.children);
-const speed = 0.1; // px por frame
+const speed = 0.2; // ajuste conforme quiser
 
-// Duplicar o conteúdo várias vezes para efeito infinito suave
-for (let i = 0; i < 2; i++) {
+// Duplicar conteúdo suficiente para slider infinito
+const repeatCount = 3; // repete 3 vezes
+for (let i = 0; i < repeatCount; i++) {
   images.forEach(img => container.appendChild(img.cloneNode(true)));
 }
 
 let offset = 0;
-const totalWidth = container.scrollWidth / 2; // largura real antes da duplicação
+const originalWidth = container.scrollWidth / repeatCount;
 
 function animate() {
   offset += speed;
-  if (offset >= totalWidth) offset = 0; // reseta sem pular
+  if (offset >= originalWidth) offset = offset % originalWidth; // reset contínuo
   container.style.transform = `translateX(${-offset}px)`;
   requestAnimationFrame(animate);
 }
