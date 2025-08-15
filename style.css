@@ -681,12 +681,13 @@ footer {
   header {
     position: relative;
     height: 80px;
+    border: 1px saddlebrown solid;
   }
   .header-container {
     display: flex;
     justify-content: center;
-    gap : 20px;
-    width: 100%;
+    gap : 10px;
+    min-width: 100%;
   }
 
   .header-center h1 {
