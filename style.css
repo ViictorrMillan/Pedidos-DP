@@ -40,23 +40,22 @@ header {
 /* ================== SLIDER ================== */
 .marcas {
   position: fixed;
-  top: 120px; /* abaixo do header */
+  top: 120px;
   left: 0; right: 0;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
-  z-index: 90; /* abaixo do form */
+  z-index: 90;
   background: #333;
-  
 }
+
 .marcas-container {
   display: flex;
   gap: 40px;
-  width: max-content; /* importante para loop contínuo */
-  animation: scroll 25s linear infinite;
+  flex-wrap: nowrap;
 }
+
 .marcas-container img {
   height: 80px;
   flex-shrink: 0;
@@ -64,8 +63,12 @@ header {
   transition: transform 0.3s;
 }
 .marcas-container img:hover { transform: scale(1.1); }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+/* mobile */
+@media (max-width: 768px) {
+  .marcas { height: 100px; }
+  .marcas-container img { height: 60px; }
+}
 /* ================== FORMULÁRIO CENTRAL ================== */
 .dados-pessoais {
   position: fixed;
@@ -138,7 +141,53 @@ footer {
   .form-grid { grid-template-columns: 1fr; gap: 15px; }
 }
 
-/* ================== PEQUENAS ALTURAS ================== */
-@media (max-height:640px) {
-  .dados-pessoais { transform: scale(0.95); transform-origin: center; }
+
+/* ================== RESPONSIVO MOBILE ================== */
+@media (max-width: 768px) {
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
+
+  /* Header menor */
+  header {
+    position: relative; /* acompanha scroll */
+    height: 80px;
+  }
+  .header-center h1 { font-size: 22px; }
+  .header-left .logo { height: 45px; }
+
+  /* Slider no fluxo */
+  .marcas {
+    position: relative; /* sai do fixed */
+    top: auto;
+    left: auto;
+    height: 80px;
+    margin: 20px auto; /* espaço entre header e form */
+    background: #333;
+  }
+
+  .marcas-container img {
+    height: 50px;
+  }
+
+  /* Form abaixo do slider, no fluxo */
+  .dados-pessoais {
+    position: relative; /* entra no fluxo da página */
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto 40px auto; /* espaço entre slider e footer */
+    width: 95%;
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .dados-pessoais h2 { font-size: 20px; margin-bottom: 15px; }
+  .form-grid { grid-template-columns: 1fr; gap: 15px; }
+  .input-group input, .input-group select { font-size: 14px; padding: 8px; }
+  .btn-next { font-size: 16px; padding: 12px; }
+
+  /* Footer menor */
+  footer { position: relative; height: 60px; font-size: 14px; }
 }

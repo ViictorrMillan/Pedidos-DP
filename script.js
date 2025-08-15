@@ -40,3 +40,26 @@ document.getElementById('form-dados').addEventListener('submit', function(e){
 
   if (ok) alert('Formulário válido! Próxima etapa...');
 });
+
+
+// Slider
+const container = document.querySelector('.marcas-container');
+const images = Array.from(container.children);
+const speed = 0.1; // px por frame
+
+// Duplicar o conteúdo várias vezes para efeito infinito suave
+for (let i = 0; i < 2; i++) {
+  images.forEach(img => container.appendChild(img.cloneNode(true)));
+}
+
+let offset = 0;
+const totalWidth = container.scrollWidth / 2; // largura real antes da duplicação
+
+function animate() {
+  offset += speed;
+  if (offset >= totalWidth) offset = 0; // reseta sem pular
+  container.style.transform = `translateX(${-offset}px)`;
+  requestAnimationFrame(animate);
+}
+
+animate();
