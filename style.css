@@ -521,11 +521,10 @@ header {
 .marcas-container img {
   min-height: 100px;
   max-height: 150px; 
-  width: 140px; 
+  max-width: 150px; 
   min-width: 80px;
   object-fit: contain; 
   flex-shrink: 0;
-  cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 10px;
   padding: 10px; /
@@ -704,12 +703,15 @@ footer {
   .marcas {
     position: relative;
     top: auto;
-    height: 80px;
     margin: 20px auto;
+    height: 80px;
   }
 
   .marcas-container img {
-    height: 70px;
+    min-height: 80px;
+    max-height: 120px; 
+    max-width: 120px; 
+    min-width: 80px;
   }
 
   .dados-pessoais {
