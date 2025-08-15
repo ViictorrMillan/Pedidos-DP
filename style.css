@@ -353,7 +353,7 @@ footer {
 @media (max-width: 768px) {
   header nav {
     display: none;
-    background: #ff7a15; /* laranja vibrante */
+    background: linear-gradient(90deg, #1a1a1a, #222);
     position: absolute;
     top: 80px;
     right: 0;
@@ -362,7 +362,6 @@ footer {
     justify-content: space-around;
     gap: 10px;
     border-radius: 0 0 15px 15px;
-    border: 1px solid #e66900;
   }
 
   header nav.active {
@@ -381,4 +380,144 @@ footer {
   .hamburger {
     display: block;
   }
+}
+
+
+
+/* ================== DARK ULTRA PREMIUM ================== */
+
+/* Fundo geral */
+html, body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: auto;
+  height: auto;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1a1a1a, #222);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+}
+
+.header-left .logo {
+  filter: drop-shadow(0 2px 6px rgba(255, 164, 92, 0.7));
+}
+
+.header-center h1 {
+  color: #ffb466;
+  text-shadow: 0 2px 8px rgba(255,180,102,0.5);
+}
+
+/* Header links hover com linha embaixo e glow */
+.header-right nav a {
+  color: #ffa45c;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header-right nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffb466;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.header-right nav a:hover::after {
+  width: 100%;
+}
+
+.header-right nav a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px #ffb466;
+}
+
+/* Slider dark */
+.marcas {
+  background: #1c1c1c;
+  border-radius: 14px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+.marcas-container img {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 15px;
+}
+
+.marcas-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Form dark */
+.dados-pessoais {
+  background: #1b1b1b;
+  border: 2px solid #ffa45c;
+  color: #e0e0e0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.dados-pessoais h2 {
+  color: #ffa45c;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.input-group label {
+  color: #ddd;
+}
+
+.input-group input,
+.input-group select {
+  background-color: #232323;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  transition: all 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #ffb466;
+  box-shadow: 0 0 12px rgba(255,180,102,0.5);
+  outline: none;
+}
+
+/* Botão dark premium */
+.btn-next {
+  background: linear-gradient(90deg, #ff9d5c, #ff8b30);
+  color: #1b1b1b;
+  box-shadow: 0 6px 18px rgba(255,180,102,0.4);
+  transition: all 0.3s;
+}
+
+.btn-next:hover {
+  background: linear-gradient(90deg, #ffb070, #ff9b3a);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255,180,102,0.6);
+}
+
+/* Footer dark */
+footer {
+  background: #1c1c1c;
+  color: #e0e0e0;
+  box-shadow: 0 -4px 18px rgba(0,0,0,0.7);
+  border-top: 1px solid #333;
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #232323 inset; /* mesmo background do input */
+    -webkit-text-fill-color: #e0e0e0; /* cor do texto */
+    transition: background-color 5000s ease-in-out 0s;
 }
