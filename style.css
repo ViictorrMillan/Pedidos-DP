@@ -1,0 +1,144 @@
+/* ================== RESET ================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden; /* no desktop, scroll é controlado */
+}
+
+/* ================== HEADER ================== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  background: #ff7a15;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 0 20px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+.header-left .logo { height: 55px; margin-right: 20px; }
+.header-center h1 { font-size: 28px; text-align: center; white-space: nowrap; }
+.header-right nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: bold; }
+.header-right nav a:hover { text-decoration: underline; }
+.hamburger { display: none; font-size: 28px; cursor: pointer; }
+@media (max-width: 768px) {
+  header nav { display: none; flex-direction: column; background: #ff7a15; position: absolute; top: 100px; right: 0; width: 200px; }
+  header nav.active { display: flex; }
+  .hamburger { display: block; }
+}
+
+/* ================== SLIDER ================== */
+.marcas {
+  position: fixed;
+  top: 120px; /* abaixo do header */
+  left: 0; right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 90; /* abaixo do form */
+  background: #333;
+  
+}
+.marcas-container {
+  display: flex;
+  gap: 40px;
+  width: max-content; /* importante para loop contínuo */
+  animation: scroll 25s linear infinite;
+}
+.marcas-container img {
+  height: 80px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.marcas-container img:hover { transform: scale(1.1); }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ================== FORMULÁRIO CENTRAL ================== */
+.dados-pessoais {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff8f0;
+  border: 2px solid #ff7a15;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 100; /* acima do slider */
+}
+.dados-pessoais h2 {
+  margin-bottom: 25px;
+  color: #ff7a15;
+  text-align: center;
+  font-size: 26px;
+}
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 768px) { .form-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
+.input-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+.input-group label { font-weight: bold; margin-bottom: 5px; }
+.input-group input, .input-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.input-group input:invalid, .input-group select:invalid { border-color: red; }
+.endereco-numero { display: flex; gap: 10px; }
+.endereco-numero .numero { max-width: 80px; }
+
+/* ================== BOTÃO ================== */
+.btn-next {
+  width: 100%;
+  padding: 16px;
+  background: #ff7a15;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-next:hover { background: #e66a00; transform: translateY(-2px); }
+
+/* ================== FOOTER ================== */
+footer {
+  height: 80px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 100;
+}
+
+/* ================== RESPONSIVO ================== */
+@media (max-width: 768px) {
+  html, body { overflow: auto; } /* permite scroll no mobile */
+  main { padding: 0 10px; }
+  .marcas { height: 100px; }
+  .marcas-container { animation: scroll 40s linear infinite; }
+  .marcas-container img { height: 60px; }
+  .form-grid { grid-template-columns: 1fr; gap: 15px; }
+}
+
+/* ================== PEQUENAS ALTURAS ================== */
+@media (max-height:640px) {
+  .dados-pessoais { transform: scale(0.95); transform-origin: center; }
+}

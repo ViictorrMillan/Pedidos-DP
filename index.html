@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciador de Pedidos</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    
+
+<header>
+  <div class="header-container">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo"/>
+    </div>
+    <div class="header-center">
+      <h1>Gerenciador de Pedidos</h1>
+    </div>
+    <div class="header-right">
+      <nav id="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Ajuda</a>
+      </nav>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </div>
+</header>
+
+<!-- Slider entre header e form -->
+<section class="marcas">
+  <div class="marcas-container">
+    <img src="/images/logos/Levitare.png" alt="Levitare">
+    <img src="/images/logos/Levitare.png" alt="Levitare">
+    <img src="/images/logos/Levitare.png" alt="Levitare">
+    <img src="/images/logos/Levitare.png" alt="Levitare">
+  </div>
+</section>
+
+<!-- Formulário fixo no centro -->
+<main>
+  <section class="dados-pessoais">
+    <h2>Dados Pessoais</h2>
+    <form id="form-dados" novalidate>
+      <div class="form-grid">
+        <div>
+          <div class="input-group obrigatorio">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
+          </div>
+          <div class="input-group obrigatorio">
+            <label for="pizzaria">Pizzaria</label>
+            <input type="text" id="pizzaria" name="pizzaria" placeholder="Insira o nome da pizzaria" required>
+          </div>
+          <div class="input-group obrigatorio">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Somente números" pattern="[0-9]{11}" inputmode="numeric" required>
+          </div>
+        </div>
+        <div>
+          <div class="input-group">
+            <label for="endereco">Endereço</label>
+            <div class="endereco-numero">
+              <input type="text" id="endereco" name="endereco" placeholder="Rua, avenida, etc." class="logradouro">
+              <input type="text" id="numero" name="numero" placeholder="Nº" class="numero">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="Somente números" pattern="[0-9]{8}" inputmode="numeric">
+          </div>
+          <div class="input-group">
+            <label for="pagamento">Pagamento</label>
+            <select id="pagamento" name="pagamento">
+              <option value="">Selecione</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Pix">Pix</option>
+              <option value="Cartão">Cartão</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn-next">Próximo</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Tico Favaretti. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
