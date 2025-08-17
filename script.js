@@ -34,7 +34,7 @@ document.getElementById('form-dados').addEventListener('submit', function(e){
     { id: 'nome',       msg: 'Campo obrigatório' },
     { id: 'pizzaria',   msg: 'Campo obrigatório' },
     { id: 'telefone',   msg: 'Campo obrigatório' },
-    { id: 'pagamento',   msg: 'Campo obrigatório' }
+    { id: 'pagamento',  msg: 'Campo obrigatório' }
   ];
 
   let ok = true;

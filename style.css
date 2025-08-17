@@ -609,8 +609,10 @@ select.error {
   border: 2px solid #e74c3c;      
   background-color: #000000;       
   animation: pulse 1s infinite, shake 0.3s; 
+  color: #e74c3c; 
 }
 
+/* Placeholder vermelho */
 input.error::placeholder,
 select.error::placeholder {
   color: #e74c3c;                  
