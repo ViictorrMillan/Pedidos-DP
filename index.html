@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gerenciador de Pedidos</title>
+
+  <!--? Css  Styles -->
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="carrinho.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
 </head>
 <body>
 
@@ -108,6 +115,59 @@
       <button type="submit" class="btn-next">Iniciar Pedido!</button>
     </form>
   </section>
+
+ <section id="compras-container">
+<h2> Selecione seus produtos</h2>
+  <!-- Pesquisa -->
+  <input type="text" id="pesquisa" placeholder="Pesquisar produto..." />
+
+  <!-- Categorias -->
+  <div id="categorias-wrapper">
+    <i class="fas fa-chevron-left scroll-indicator left"></i>
+    <div id="categorias-container"></div>
+    <i class="fas fa-chevron-right scroll-indicator right"></i>
+  </div>
+
+  <!-- Produtos -->
+  <div id="produtos-container"></div>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <!-- Modal Produto -->
+  <div id="modal">
+    <div class="modal-conteudo">
+      <span id="modal-fechar">&times;</span>
+      <img id="modal-img" alt="Produto">
+      <h2 id="modal-nome"></h2>
+      <p id="modal-preco">R$ 0.00</p>
+      <p id="modal-descricao"></p>
+     <div class="quantidade-container">
+        <button id="menos"><i class="fa fa-minus"></i></button>
+        <input type="number" id="modal-quantidade" min="1" value="1" readonly>
+        <button id="mais"><i class="fa fa-plus"></i></button>
+    </div>
+      <button id="modal-adicionar">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+
+  <!-- Carrinho Lateral -->
+  <div id="painel-carrinho" class="carrinho-lateral">
+    <button id="carrinho-fechar" class="carrinho-fechar">x</button>
+    <h2><i class="fas fa-shopping-cart"></i> Seu Carrinho</h2>
+    <ul id="carrinho-itens"></ul>
+    <p class="carrinho-ptotal">Total: R$ <span id="carrinho-total">0.00</span></p>
+    <button id="carrinho-final">
+      <i class="fas fa-shopping-cart"></i>Finalizar Compra</button>
+  </div>
+
+  <!-- Botão flutuante do Carrinho -->
+  <div id="carrinho">
+    <i class="fas fa-shopping-cart"></i> -  <span id="carrinho-contador">0</span>
+  </div>
+
+</section>
+
 </main>
 
 <footer>
@@ -117,5 +177,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="compras.js"></script>
+<script src="finalizar.js"></script>
 </body>
 </html>

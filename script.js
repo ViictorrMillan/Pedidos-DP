@@ -26,7 +26,7 @@ window.addEventListener('resize', () => {
 });
 
 
-// Validação: placeholder vermelho
+// Validação: placeholder vermelho + avançar para compras
 document.getElementById('form-dados').addEventListener('submit', function(e){
   e.preventDefault();
 
@@ -50,39 +50,38 @@ document.getElementById('form-dados').addEventListener('submit', function(e){
       el.placeholder = msg;
       el.value = '';
     }
-
-    // Remove o erro quando digitar
     el.addEventListener('input', () => {
       el.classList.remove('error');
-      if(id==='telefone') el.placeholder='Somente números';
-      if(id==='nome') el.placeholder='Insira seu nome';
-      if(id==='pizzaria') el.placeholder='Insira o nome da pizzaria';
     });
   });
 
-  if (ok) alert('Formulário válido! Próxima etapa...');
+  if(ok){
+    // Esconder form e mostrar compras
+    document.querySelector('.dados-pessoais').style.display = 'none';
+    document.getElementById('compras-container').style.display = 'block';
+    carregarProdutos(); // garante que produtos/categorias carreguem
+  }
 });
 
-const container = document.querySelector('.marcas-container');
-const images = Array.from(container.children);
+
+// slide
+const marcasContainer = document.querySelector('.marcas-container');
+const images = Array.from(marcasContainer.children);
 const speed = 0.2; // ajuste conforme quiser
 
-// Duplicar conteúdo suficiente para slider infinito
 const repeatCount = 3; // repete 3 vezes
 for (let i = 0; i < repeatCount; i++) {
-  images.forEach(img => container.appendChild(img.cloneNode(true)));
+  images.forEach(img => marcasContainer.appendChild(img.cloneNode(true)));
 }
 
 let offset = 0;
-const originalWidth = container.scrollWidth / repeatCount;
+const originalWidth = marcasContainer.scrollWidth / repeatCount;
 
 function animate() {
   offset += speed;
   if (offset >= originalWidth) offset = offset % originalWidth; // reset contínuo
-  container.style.transform = `translateX(${-offset}px)`;
+  marcasContainer.style.transform = `translateX(${-offset}px)`;
   requestAnimationFrame(animate);
 }
 
 animate();
-
-

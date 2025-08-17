@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "MUSSARELA 3M",
+    "codigo": "01",
+    "imagem": "/images/produtos/3m.jpeg",
+    "categoria": "queijos e laticínios",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "KG",
+    "descricao": "Queijo mussarela fresco, sabor delicioso e textura macia."
+  },
+  {
+    "nome": "Calabresa Aurora",
+    "codigo": "02",
+    "imagem": "/images/produtos/calabresa_a.jpg",
+    "categoria": "frios",
+    "preco": 12.0,
+    "promocao": true,
+    "vendidoPor": "KG",
+    "descricao": "Calabresa defumada Aurora, ideal para lanches e pizzas."
+  }
+]
