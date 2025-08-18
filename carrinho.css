@@ -224,7 +224,7 @@
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s;
-  z-index: 2000;
+  z-index: 999;
   text-align: center;
 }
 
@@ -254,14 +254,14 @@
 
 .modal-conteudo {
   background: #fff;
-  padding: 20px;
+  padding: 24px; /* um pouco mais espaçoso */
   border-radius: 16px;
   width: 100%;
-  max-width: 500px;
+  max-width: 520px; /* levemente maior */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px; /* aumenta o espaçamento interno */
   position: relative;
 }
 
@@ -279,26 +279,25 @@
   color: #e74c3c;
 }
 
-
 #modal-img {
   width: 100%;
-  max-width: 400px;
-  max-height: 250px;
+  min-height: 300px; /* um pouco maior */
+  max-height: 300px; /* um pouco maior */
   object-fit: contain;
   border-radius: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #modal-nome {
-  font-size: 22px;
   font-weight: 700;
   text-align: center;
    color: #000000;
+   font-size: 24px;
 }
 
 #modal-preco {
-  font-size: 20px;
+  font-size: 22px;
   color: #e74c3c;
   font-weight: bold;
   text-align: center;
@@ -350,12 +349,12 @@
 #modal-adicionar {
   background: #27ae60;
   color: #fff;
-  padding: 12px;
+  padding: 14px;
   width: 100%;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -368,11 +367,12 @@
 .carrinho-lateral {
   position: fixed;
   top: 0;
-  right: -470px;
-  width: 450px;
+  right: -500px;
+  width: 500px;
   height: 100%;
+  border: 1px solid #333333;
   background: #232323;
-  border-left: 1px solid #ffa45c;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -388,18 +388,7 @@
 .carrinho-lateral h2 {
   font-size: 22px;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.carrinho-lateral h2 i {
-  font-size: 24px;
-  color: #f304bf;
-  transition: opacity 0.2s;
 }
 
 .carrinho-lateral.aberto h2 i {
@@ -413,7 +402,7 @@
   background: transparent;
   color: #fff;
   border: none;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s;
@@ -435,7 +424,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
-  font-size: 16px;
+  font-size: 18px;
   gap: 10px;
 }
 
@@ -466,9 +455,9 @@
 
 .item-controles button {
   border: none;
-  background: #ffa45c;
-  color: #fff;
   padding: 8px 12px;
+  font-size: 16px;
+  color: #fff;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
@@ -518,22 +507,27 @@
   font-size: 22px;
 }
 
+/* Ícone do carrinho flutuante */
 #carrinho {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #ffa45c;
   color: #fff;
-  padding: 16px 22px; /* aumenta um pouco */
+  padding: 16px 22px; 
   border-radius: 50px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 18px; /* maior que antes */
+  font-size: 25px; 
   z-index: 1200;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* espaçamento entre ícone e texto */
+  gap: 8px; 
+}
+
+#carrinho i {
+  font-size: 40px; 
 }
 
 #carrinho-total {
@@ -545,7 +539,7 @@
     margin-bottom: 20px;
     background: #27ae60;
     font-size: 18px;
-    width: 120px;
+    width: 180px;
     padding: 8px 12px;
     border-radius: 6px;
 }
@@ -559,6 +553,10 @@
     width: 80px;
     height: 80px;
   }
+
+  #carrinho i {
+  font-size: 30px; 
+}
 }
 
 @media (max-width: 768px) {
@@ -581,62 +579,36 @@
   #modal-img {
     max-height: 200px;
   }
-}
 
+  #toast {
+    width: 70%;
+    font-size: 18px;
+    bottom: 28px;
+    left: 40%;
+  }
 
-/* Ícone do carrinho flutuante */
-#carrinho {
+  #carrinho {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #ffa45c;
   color: #fff;
-  padding: 16px 22px; /* aumenta um pouco */
+  padding: 16px 22px; 
   border-radius: 50px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 25px; /* maior que antes */
+  font-size: 25px; 
   z-index: 1200;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* espaçamento entre ícone e texto */
+  gap: 8px; 
 }
 
 #carrinho i {
-  font-size: 26px; /* ícone maior */
+  font-size: 26px; 
 }
 
-/* Modal */
-.modal-conteudo {
-  background: #fff;
-  padding: 24px; /* um pouco mais espaçoso */
-  border-radius: 16px;
-  width: 100%;
-  max-width: 520px; /* levemente maior */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; /* aumenta o espaçamento interno */
-  position: relative;
-}
-
-#modal-img {
-  width: 100%;
-  min-height: 300px; /* um pouco maior */
-  max-height: 300px; /* um pouco maior */
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-#modal-nome {
-  font-size: 24px; /* maior */
-}
-
-#modal-preco {
-  font-size: 22px; /* maior */
 }
 
 #modal-adicionar {

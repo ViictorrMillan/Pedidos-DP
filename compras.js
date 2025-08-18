@@ -76,7 +76,7 @@ function mostrarToast(msg) {
   toast.className = "show";
   setTimeout(() => {
     toast.className = toast.className.replace("show","");
-  }, 3000);
+  }, 2000);
 }
 
 // Adicionar ao carrinho
@@ -125,7 +125,6 @@ function atualizarCarrinho() {
   });
 
   totalEl.textContent = total.toFixed(2);
-  document.getElementById("carrinho-contador").textContent = carrinho.reduce((s,it)=>s+it.qtd,0);
 }
 
 // Alterar quantidade
