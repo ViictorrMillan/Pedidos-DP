@@ -1,6 +1,6 @@
 [
   {
-    "nome": "MUSSARELA 3M",
+    "nome": "Mussarela 3M",
     "codigo": "01",
     "imagem": "/images/produtos/3m.jpeg",
     "categoria": "queijos e laticínios",
@@ -14,9 +14,9 @@
     "codigo": "02",
     "imagem": "/images/produtos/calabresa_a.jpg",
     "categoria": "frios",
-    "preco": 12.0,
+    "preco": 5.0,
     "promocao": true,
     "vendidoPor": "KG",
-    "descricao": "Calabresa defumada Aurora, ideal para lanches e pizzas."
+    "descricao": "Linguiça calabresa Aurora, sabor intenso e defumado."
   }
 ]

@@ -431,7 +431,8 @@ header {
 }
 
 .header-left .logo {
-  height: 80px;
+  height: 90px;
+  object-fit: contain; 
 }
 
 .header-center {
