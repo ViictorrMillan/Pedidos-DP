@@ -423,7 +423,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
-  font-size: 18px;
+  font-size: 14px;
   gap: 10px;
 }
 
@@ -455,8 +455,8 @@
 
 .item-controles button {
   border: none;
-  padding: 8px 12px;
-  font-size: 16px;
+  padding: 4px 8px;
+  font-size: 14px;
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
