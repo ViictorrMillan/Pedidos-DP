@@ -186,11 +186,10 @@
 
 
 .produto-card img {
-  max-width: 300px;
-  max-height: 160px;
+  width: 150px;
+  max-height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .produto-card button {
@@ -433,6 +432,7 @@
   height: 120px;
   object-fit: cover;
   border-radius: 10px;
+  padding: 5px;
 }
 
 .item-info {

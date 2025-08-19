@@ -2,21 +2,386 @@
   {
     "nome": "Mussarela 3M",
     "codigo": "01",
-    "imagem": "/images/produtos/3m.jpeg",
+    "imagem": "/images/produtos/3m.png",
     "categoria": "queijos e laticínios",
     "preco": 5.0,
     "promocao": false,
     "vendidoPor": "KG",
-    "descricao": "Queijo mussarela fresco, sabor delicioso e textura macia."
+    "descricao": "Queijo mussarela sabor suave e textura macia, perfeito para pizzas, lanches e pratos gratinados."
+  }, {
+    "nome": "Catupiry Bisnaga 1,5KG - CATUPIRY",
+    "codigo": "02",
+    "imagem": "/images/produtos/catupiry_requeijao.png",
+    "categoria": "queijos e laticínios",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "KG",
+    "descricao": "Creme de queijo leve e saboroso, ótimo para recheios, pizzas e salgados."
+  },
+  {
+    "nome": "Queijo Cheddar S/amido 1,5kg - Coronata",
+    "codigo": "03",
+    "imagem": "/images/produtos/corochedder.png",
+    "categoria": "queijos e laticínios",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "KG",
+    "descricao": "Queijo de sabor intenso e cremoso, perfeito para hambúrgueres, molhos e lanches."
+  },
+  {
+    "nome": "Linguiça calabresa 2,5kg - Aurora",
+    "codigo": "04",
+    "imagem": "images/produtos/calabresa_frimesa.png",
+    "categoria": "carnes e embutidos",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "KG",
+    "descricao": "Linguiça calabresa defumada, ideal para pizzas, feijoadas e receitas caseiras."
   },
   {
     "nome": "Calabresa Aurora",
-    "codigo": "02",
-    "imagem": "/images/produtos/calabresa_a.jpg",
-    "categoria": "frios",
+    "codigo": "5",
+    "imagem": "images/produtos/calabresa_a.png",
+    "categoria": "carnes e embutidos",
     "preco": 5.0,
-    "promocao": true,
+    "promocao": false,
     "vendidoPor": "KG",
-    "descricao": "Linguiça calabresa Aurora, sabor intenso e defumado."
+    "descricao": "Calabresa saborosa e defumada, ótima para lanches, assados e acompanhamentos."
+  }, {
+    "nome": "Cream Cheese Cremoso 1,2kg - Catupiry",
+    "codigo": "6",
+    "imagem": "/images/produtos/cream_cheese_catupiry.png",
+    "categoria": "queijos e laticínios",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Cream cheese cremoso e suave, ótimo para patês, recheios e sobremesas."
+  }, {
+    "nome": "Palmito Açai 1kg - Gavi ",
+    "codigo": "7",
+    "imagem": "/images/produtos/palmito.png",
+    "categoria": "vegetais e molhos",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Palmito macio e saboroso, ótimo para saladas, tortas e pizzas."
+  }, {
+    "nome": "Ricota Fresca - Coronata",
+    "codigo": "8",
+    "imagem": "/images/produtos/ricota-fresca-coronata.png",
+    "categoria": "vegetais e molhos",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Ricota fresca e cremosa, ideal para recheios, saladas e pratos quentes."
+  }, {
+    "nome": "Atum Sólido 140g - Pescador ",
+    "codigo": "9",
+    "imagem": "/images/produtos/atum_solido_pescador.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Atum sólido em conserva, ideal para saladas, sanduíches e pratos rápidos."
+  }, {
+    "nome": "Atum Ralado 400g - Tours Brasil",
+    "codigo": "10",
+    "imagem": "/images/produtos/atum_ralado_tours.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Atum ralado em conserva, ideal para saladas, sanduíches e pratos rápidos."
+  }, {
+    "nome": "Chicharro Ralado Lata 410g - Santa Rita",
+    "codigo": "11",
+    "imagem": "/images/produtos/chicharro_ralado_santa_rita.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Chicharro ralado em conserva, ideal para saladas, sanduíches e pratos rápidos."
+  }, {
+    "nome": "Atum Em Pedacos 480g - Coqueiro" ,
+    "codigo": "13",
+    "imagem": "/images/produtos/atum_pedacos_coqueiro.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Atum em pedaços em conserva, ideal para saladas, sanduíches e pratos rápidos."
+  }, {
+    "nome": "Carne seca bovina grande traseiro 5kg - Jordanésia ",
+    "codigo": "14",
+    "imagem": "/images/produtos/traseiro_jordanesia.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Carne seca bovina, ideal para pratos típicos e receitas caseiras."
+  }, {
+    "nome": "Presunto Cozido 800g - Aurora",
+    "codigo": "15",
+    "imagem": "/images/produtos/presunto_cozido_aurora.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "Unidade",
+    "descricao": "Presunto cozido, ideal para sanduíches, pratos quentes e frios."
+  }, {
+    "nome": "Apresuntado 3,7kg - Aurora",
+    "codigo": "16",
+    "imagem": "/images/produtos/apresuntado_aurora.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Apresuntado saboroso e versátil, ideal para lanches, pizzas e pratos diversos."
+  }, {
+    "nome": "Farinha De Trigo Para Pizza Tipo 1 Pacote 5kg - Anaconda",
+    "codigo": "17",
+    "imagem": "/images/produtos/farinha_pizza_anaconda.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Farinha de trigo especial para pizza, garantindo uma massa leve e crocante."
+  } , {
+    "nome": "Farinha De Pastel Para Pizza Tipo 1 Pacote 5kg - Anaconda",
+    "codigo": "18",
+    "imagem": "/images/produtos/farinha_pastel_anaconda.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Farinha de trigo especial para pastel, garantindo uma massa leve e crocante."
+  }, {
+    "nome": "Granulado Macio 1,050KG - HARALD",
+    "codigo": "19",
+    "imagem": "/images/produtos/granulado_macio_escuro_harald.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Granulado macio escuro, ideal para confeitaria e decoração de bolos."
+  }, {
+    "nome": "Recheio forneável sabor chocolate branco confeiteiro 1,010KG - HARALD",
+    "codigo": "20",
+    "imagem": "/images/produtos/recheio_forneavel_chocolate_branco_harald.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Recheio forneável de chocolate branco, ideal para bolos e sobremesas."
+  }, {
+    "nome": "Recheio Forneável Confeiteiro sabor Chocolate Ao Leite 1,01kg - HARALD",
+    "codigo": "21",
+    "imagem": "/images/produtos/recheio_forneavel_chocolate_ao_leite_manga_harald.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Recheio forneável de chocolate ao leite, ideal para bolos e sobremesas."
+  }, {
+    "nome": "Açúcar Refinado 1kg - União",
+    "codigo": "22",
+    "imagem": "/images/produtos/acucar_refinado_uniao.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Açúcar refinado, ideal para adoçar receitas e bebidas."
+  }, {
+    "nome": "Sal Refinado Tradicional 1kg - Cisne",
+    "codigo": "23",
+    "imagem": "/images/produtos/sal_refinado_cisne.png",
+    "categoria": "Carnes",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Sal refinado, ideal para temperar receitas e pratos diversos."
+  },
+  {
+    "nome": "Ervilha Lata 170g - Olé",
+    "codigo": "24",
+    "imagem": "/images/produtos/ervilha_lata_ole.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Ervilha em lata, ideal para saladas, pratos quentes e acompanhamentos."
+  }, {
+    "nome": "Milho Verde Lata 170g - Quero",
+    "codigo": "25",
+    "imagem": "/images/produtos/milho_verde_lata_quero.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Milho verde em lata, ideal para saladas, pratos quentes e acompanhamentos."
+  }, {
+    "nome": "Nutella 3kg Original - Nutella",
+    "codigo": "26",
+    "imagem": "/images/produtos/nutella_3kg.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Nutella original, ideal para recheios, coberturas e sobremesas."
+  }, {
+    "nome": "Requeijão Cremoso Bisnaga 250g - Tirolez",
+    "codigo": "27",
+    "imagem": "/images/produtos/requeijao_cremoso_tirolez.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Requeijão cremoso, ideal para sanduíches, torradas e receitas diversas."
+  }, {
+    "nome": "Queijo Fresco 450g - Coronata",
+    "codigo": "28",
+    "imagem": "/images/produtos/queijo_fresco_coronata.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Queijo fresco, ideal para sanduíches, saladas e pratos rápidos."
+  }, {
+    "nome": "Peito de Peru Defumado 500g - Sadia",
+    "codigo": "29",
+    "imagem": "/images/produtos/peito_de_peru_defumado_sadia.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Peito de peru defumado, ideal para sanduíches, saladas e pratos rápidos."
+  },{
+    "nome": "Orégano Peruano",
+    "codigo": "30",
+    "imagem": "/images/produtos/oregano_peruano.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Orégano peruano, ideal para temperar pratos e receitas diversas."
+  }, {
+    "nome": "Cogumelos Fatiados 2kg- Campo Belo",
+    "codigo": "31",
+    "imagem": "/images/produtos/cogumelos_fatiados_campo_belo_2kg.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Cogumelos fatiados, ideais para pizzas, massas e pratos diversos."
+  }, {
+    "nome": "M&M's Confeito Chocolate ao Leite 1kg",
+    "codigo": "32",
+    "imagem": "/images/produtos/mms_1kg.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Mms, ideal para recheios, coberturas e sobremesas."
+  },{
+    "nome": "Alho Triturado Balde 2Kg - Super Alho",
+    "codigo": "33",
+    "imagem": "/images/produtos/alho_triturado_super_alho_balde_2kg.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Alho triturado, ideal para temperar pratos e receitas diversas."
+  }, {
+    "nome": "Caldo de Galinha 1,1kg - Sazon",
+    "codigo": "34",
+    "imagem": "/images/produtos/caldo_de_galinha_1_1kg_sazon.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Caldo de galinha, ideal para temperar pratos e receitas diversas."
+  }, {
+    "nome": "Caldo de Carne 1,1kg - Sazo",
+    "codigo": "35",
+    "imagem": "/images/produtos/caldo_de_carne_1_1kg_sazon.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Caldo de carne, ideal para temperar pratos e receitas diversas."
+  }, {
+    "nome": "Brócolis 2Kg - Fragole",
+    "codigo": "36",
+    "imagem": "/images/produtos/brocolis_fragole_2kg.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Brócolis fresco, ideal para saladas, pratos quentes e acompanhamentos."
+  }, {
+    "nome": "Doce de Leite Moça Bisnaga 1,01 KG - NESTLÉ",
+    "codigo": "37",
+    "imagem": "/images/produtos/doce_de_leite_moca_bisnaga_1_01kg_nestle.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Doce de leite Moça, ideal para sobremesas e receitas diversas."
+  }, {
+    "nome": "Filezinho 1kg - Aurora",
+    "codigo": "38",
+    "imagem": "/images/produtos/filezinho_aurora_1kg.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Filezinho de peito de frango, ideal para sanduíches e pratos rápidos."
+  }, {
+    "nome": "Salame Pepperoni Fatiado 1kg  - Sadia",
+    "codigo": "39",
+    "imagem": "/images/produtos/salame_pepperoni_fatiado_1kg_sadia.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Salame Pepperoni Fatiado, ideal para pizzas, sanduíches e aperitivos."
+  }, {
+    "nome": "Presunto Tipo Parma Fatiado- Sadia",
+    "codigo": "40",
+    "imagem": "/images/produtos/presunto_tipo_parma_fatiado_1kg_sadia.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Presunto Tipo Parma Fatiado, ideal para sanduíches, saladas e pratos rápidos."
+  }, {
+    "nome": "Bacon Fatiado 2KG - Unai",
+    "codigo": "41",
+    "imagem": "/images/produtos/bacon_fatiado_unai_pct_2k.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Bacon fatiado, ideal para sanduíches, saladas e pratos rápidos."
+  }, {
+    "nome": "Molho de Pimenta 1,01L - Ekma",
+    "codigo": "42",
+    "imagem": "/images/produtos/molho_de_pimenta_ekma_1_01l.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Molho de pimenta, ideal para dar um toque especial em pratos e aperitivos."
+  }, {
+    "nome": "Lombo Cuzido Defumado - Aurora",
+    "codigo": "43",
+    "imagem": "/images/produtos/lombo_cuzido_defumado_aurora.png",
+    "categoria": "Enlatados",
+    "preco": 5.0,
+    "promocao": false,
+    "vendidoPor": "unidade",
+    "descricao": "Lombo cozido defumado, ideal para sanduíches, saladas e pratos rápidos."
   }
+
 ]
+
