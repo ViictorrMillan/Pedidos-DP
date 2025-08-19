@@ -234,7 +234,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; /* default fixed */
   bottom: 0;
   left: 0;
   right: 0;
@@ -313,18 +312,12 @@ footer {
   }
 
   footer {
-    position: relative;
     height: 60px;
     margin-bottom: 0px;
     font-size: 14px;
   }
 }
-/* ================== RESPONSIVO Altura ================== */
-@media screen and (max-height: 750px) {
-  footer {
-    position: relative;
-  }
-}
+
 
 
 /* ================== MENU MOBILE HAMBURGER ================== */
@@ -663,7 +656,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -750,18 +743,12 @@ footer {
   }
 
   footer {
-    position: relative;
     height: 60px;
     margin-bottom: 0px;
     font-size: 14px;
   }
 }
 
-@media screen and (max-height: 750px) {
-  footer {
-    position: relative;
-  }
-}
 
 /* ================== MENU MOBILE HAMBURGER ================== */
 @keyframes fadeSlideIn {
