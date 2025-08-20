@@ -617,13 +617,13 @@
 
 @media (max-width: 768px) {
   #produtos-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
-    margin: auto 10px 20px 10px;
+    grid-template-columns: repeat(auto-fit, minmax(165px, auto)); /* <- trocar 200px por 160px */
+    margin: auto auto 20px auto;
   }
 
   .produto-card {
   height: 350px;
-  width: 180px;
+  width: 170px;
 }
   .carrinho-lateral {
     width: 100%;
