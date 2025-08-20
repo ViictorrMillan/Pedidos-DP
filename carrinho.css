@@ -121,17 +121,17 @@
 /* ================== PRODUTOS ================== */
 #produtos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto)); /* <- trocar 1fr por auto */
+  justify-content: center;  /* agora funciona */
   gap: 12px;
-  max-width: 1200px;
-  height: 700px;
-  margin: 0 auto 30px auto;
-  padding:15px;
+  max-width: 100%;
+  margin: auto 10px 100px 10px;
+  padding: 15px;
   overflow-y: auto;
 
   /* Scroll invisível */
-  scrollbar-width: none;      /* Firefox */
-  -ms-overflow-style: none;   /* IE 10+ */
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
 }
 
 #produtos-container::-webkit-scrollbar {
@@ -139,13 +139,14 @@
 }
 
 .produto-card {
-  max-height: 350px;
+  height: 350px;
+  width: 200px;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 10px;
   background: #fff;
   display: flex;
-  gap: 10px;
+  gap: 0px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -163,15 +164,19 @@
   font-weight: bold;
   text-align: center;
   color: #000000;
+
 }
 
 .produto-subt {
   font-size: 14px;
   color: #414141;
+  gap: 3px;
   text-align: center;
   letter-spacing: 1.4px;
   font-weight: 700;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
 }
 
 .produto-card-btn {
@@ -188,9 +193,8 @@
 
 .produto-card img {
   width: 150px;
-  max-height: 150px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .produto-card button {
@@ -297,7 +301,7 @@
 }
 
 #modal-preco {
-  font-size: 22px;
+  font-size: 18px;
   color: #e74c3c;
   font-weight: bold;
   text-align: center;
@@ -309,6 +313,8 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 10px;
+  display: flex;
+  gap:10px;
 }
 
 .quantidade-container {
@@ -416,7 +422,20 @@
   flex: 1;
   overflow-y: auto;
   margin-bottom: 10px;
-  padding-right: 5px;
+  padding-right: 5px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+
+   /* Firefox */
+  scrollbar-width: none;
+
+  /* IE 10+ */
+  -ms-overflow-style: none;
+}
+
+#carrinho-itens::-webkit-scrollbar {
+  display: none;
 }
 
 #carrinho-itens li {
@@ -424,13 +443,13 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
-  font-size: 14px;
-  gap: 10px;
+  gap: 5px;
 }
 
+
 #carrinho-itens img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 10px;
   padding: 5px;
@@ -440,37 +459,73 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+.nome-produto {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.item-info span:nth-child(3) {
-  font-weight: bold;
-  color: #e74c3c;
+.descricao-produto-carrinho {
+  color: #bebebe;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  letter-spacing: 1.1px;
 }
+
+.qtd-preco-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.item-qtd {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #c0392b;
+  color: #f3f3f3;
+}
+
+.item-preco {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #14a14f;
+  color: #f3f3f3;
+}
+
 
 .item-controles {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .item-controles button {
   border: none;
-  padding: 4px 8px;
+  padding: 8px 14px;
+  border-radius: 15px;
   font-size: 14px;
   color: #fff;
-  border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
 }
 #mais {
     background: #27ae60;
-    color: #fff;
-}
+
+} 
 
 #menos {
     background: #c0392b;
-    color: #fff;
 }
 
 
@@ -547,23 +602,29 @@
 
 /* ================== RESPONSIVIDADE ================== */
 @media (max-width: 1024px) {
-  #produtos-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-  #carrinho-itens img {
-    width: 80px;
-    height: 80px;
-  }
-
   #carrinho i {
   font-size: 30px; 
 }
+
+
+.produto-subt {
+  font-size: 11px;
+}
+
+.produto-nome {
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
   #produtos-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    margin: auto 10px 20px 10px;
   }
+
+  .produto-card {
+  height: 350px;
+  width: 180px;
+}
   .carrinho-lateral {
     width: 100%;
     right: -100%;
@@ -617,7 +678,7 @@
   font-size: 18px; /* maior */
 }
 
-
+}
 
 
 

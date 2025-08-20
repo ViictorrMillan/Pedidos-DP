@@ -656,7 +656,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -746,9 +746,15 @@ footer {
     height: 60px;
     margin-bottom: 0px;
     font-size: 14px;
+    position: relative;
   }
 }
 
+@media (max-height: 750px) {
+   footer {
+     position: relative;
+   }
+}
 
 /* ================== MENU MOBILE HAMBURGER ================== */
 @keyframes fadeSlideIn {
