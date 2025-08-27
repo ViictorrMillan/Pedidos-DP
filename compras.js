@@ -21,6 +21,17 @@ const botaoCarrinho = document.getElementById("carrinho");
 const botaoFecharCarrinho = document.getElementById("carrinho-fechar");
 
 // ----------------------------
+// Atualiza visibilidade do ícone do carrinho
+// ----------------------------
+function atualizarIconeCarrinho() {
+  if (modal.classList.contains("show") || painelCarrinho.classList.contains("aberto") || carrinho.length === 0) {
+    botaoCarrinho.style.display = "none";
+  } else {
+    botaoCarrinho.style.display = "flex";
+  }
+}
+
+// ----------------------------
 // Carregar produtos
 // ----------------------------
 async function carregarProdutos() {
@@ -119,7 +130,7 @@ function renderizarProdutos() {
 }
 
 // ----------------------------
-// Modal (2 colunas)
+// Modal
 // ----------------------------
 function abrirModal(produto) {
   modalProduto = produto;
@@ -145,27 +156,37 @@ function abrirModal(produto) {
 
   qtdInput.value = 1;
   atualizarPrecoModal(produto, 1);
+
+  // Fecha painel do carrinho se estiver aberto
+  painelCarrinho.classList.remove("aberto");
+
   modal.classList.add("show");
+  atualizarIconeCarrinho();
+}
+
+function fecharModal() {
+  modal.classList.remove("show");
+  atualizarIconeCarrinho();
 }
 
 // ----------------------------
 // Atualizar Preço Modal
 // ----------------------------
 function atualizarPrecoModal(produto, qtd) {
-    if (produto.precoPorKg) {
+  if (produto.precoPorKg) {
     modalPreco.innerHTML = `
-     <div class="modal-preco-container">
-    <div class="linha-quantidade">
-      <div class="modal-preco-item quantidade">Quantidade: ${qtd} peça(s)</div>
-    </div>
-    <div class="linha-preco">
-      <div class="modal-preco-item preco-kg">Preço por Kg: R$ ${produto.precoPorKg.toFixed(2).replace('.', ',')}</div>
-      <div class="modal-preco-item preco-final aviso">Preço final após pesagem</div>
-    </div>
-  </div>
+      <div class="modal-preco-container">
+        <div class="linha-quantidade">
+          <div class="modal-preco-item quantidade">Quantidade: ${qtd} ${qtd > 1 ? 'unidades' : 'unidade'}</div>
+        </div>
+        <div class="linha-preco">
+          <div class="modal-preco-item preco-kg">Preço por Kg: R$ ${produto.precoPorKg.toFixed(2).replace('.', ',')}</div>
+          <div class="modal-preco-item preco-final aviso">Preço final após pesagem</div>
+        </div>
+      </div>
     `;
   } else if (produto.precoUnitario) {
-    let unidade = (produto.vendidoPor === "unidade" && qtd > 1) ? "Unidades" : produto.vendidoPor;
+    let unidade = (produto.vendidoPor === "unidade" && qtd > 1) ? "unidades" : produto.vendidoPor;
     modalPreco.innerHTML = `
       <span class="modal-preco-info">${qtd} ${unidade} por R$ ${(produto.precoUnitario * qtd).toFixed(2).replace('.', ',')}</span>
     `;
@@ -209,7 +230,7 @@ function atualizarCarrinho() {
       <div class="item-info">
         <span class="nome-produto" title="${item.nome}">${item.nome}</span>
         <div class="qtd-preco-carrinho">
-          <span class="item-qtd">Qtd: ${item.qtd} ${item.vendidoPor}</span>
+          <span class="item-qtd">${item.qtd} ${item.vendidoPor === 'unidade' ? (item.qtd > 1 ? 'unidades' : 'unidade') : item.vendidoPor}</span>
           ${precoInfo}
         </div>
         <div class="item-controles">
@@ -220,7 +241,6 @@ function atualizarCarrinho() {
       </div>
     `;
 
-    // Event listeners
     li.querySelector(".mais").addEventListener("click", () => alterarQtd(i, 1));
     li.querySelector(".menos").addEventListener("click", () => alterarQtd(i, -1));
     li.querySelector(".remover").addEventListener("click", () => removerItem(i));
@@ -229,7 +249,10 @@ function atualizarCarrinho() {
   });
 
   totalEl.textContent = total.toFixed(2).replace('.', ',');
-  botaoCarrinho.style.display = carrinho.length ? "flex" : "none";
+
+  // Atualiza visibilidade do ícone
+  atualizarIconeCarrinho();
+
   botaoFinal.style.display = carrinho.length ? "flex" : "none";
 }
 
@@ -271,7 +294,7 @@ container.addEventListener("click", e => {
   }
 });
 
-document.getElementById("modal-fechar").onclick = () => modal.classList.remove("show");
+document.getElementById("modal-fechar").onclick = fecharModal;
 document.getElementById("menos").onclick = () => {
   let qtd = Math.max(1, parseInt(qtdInput.value) - 1);
   qtdInput.value = qtd;
@@ -285,16 +308,16 @@ document.getElementById("mais").onclick = () => {
 document.getElementById("modal-adicionar").onclick = () => {
   const qtd = parseInt(qtdInput.value) || 1;
   adicionarCarrinho(modalProduto, qtd);
-  modal.classList.remove("show");
+  fecharModal();
 };
 
 botaoCarrinho.addEventListener("click", () => {
   painelCarrinho.classList.add("aberto");
-  botaoCarrinho.style.display = "none";
+  atualizarIconeCarrinho();
 });
 botaoFecharCarrinho.addEventListener("click", () => {
   painelCarrinho.classList.remove("aberto");
-  if (carrinho.length > 0) botaoCarrinho.style.display = "flex";
+  atualizarIconeCarrinho();
 });
 
 // ----------------------------
