@@ -139,7 +139,7 @@
 }
 
 .produto-card {
-  height: 350px;
+  height: 320px;
   width: 200px;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -177,6 +177,19 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+}
+
+.modal-preco-info {
+  margin-right: 20px; /* espaço entre infos */
+  font-size: 16px;    /* tamanho do texto */
+  color: #333;        /* cor do texto */
+}
+
+.modal-preco-aviso {
+  font-size: 14px;
+  color: #ff4500;     /* destaque em laranja/vermelho */
+  display: block;
+  margin-top: 5px;
 }
 
 .produto-card-btn {
@@ -519,12 +532,12 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-#mais {
+.mais {
     background: #27ae60;
 
 } 
 
-#menos {
+.menos {
     background: #c0392b;
 }
 
@@ -608,11 +621,11 @@
 
 
 .produto-subt {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .produto-nome {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -622,7 +635,6 @@
   }
 
   .produto-card {
-  height: 350px;
   width: 170px;
 }
   .carrinho-lateral {
