@@ -179,19 +179,6 @@
   flex-direction: column;
 }
 
-.modal-preco-info {
-  margin-right: 20px; /* espaço entre infos */
-  font-size: 16px;    /* tamanho do texto */
-  color: #333;        /* cor do texto */
-}
-
-.modal-preco-aviso {
-  font-size: 14px;
-  color: #ff4500;     /* destaque em laranja/vermelho */
-  display: block;
-  margin-top: 5px;
-}
-
 .produto-card-btn {
   color: #fff;
   background-color: #27ae60;
@@ -332,6 +319,7 @@
 #modal-descricao div {
   margin-bottom: 2px;
   width: 50%;
+  font-size: 16px;
 }
 
 
@@ -339,6 +327,31 @@
   display: inline-block;
   color: #1b1b1b;
 }
+
+.modal-preco-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  color: #2c2c2c;
+}
+
+.linha-quantidade {
+  width: 100%;
+}
+
+.linha-preco {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* quebra em mobile */
+   color: red;
+  font-size: 16px; /* menor que os outros */
+  font-weight: bold;
+ 
+}
+
+
+
 
 .quantidade-container {
   display: flex;
@@ -700,5 +713,12 @@
   font-size: 18px; /* maior */
 }
 
+#modal-descricao div {
+  font-size: 14px;
 }
 
+.linha-preco {
+ gap: 10px;
+ font-size: 14px;
+}
+}

@@ -152,12 +152,17 @@ function abrirModal(produto) {
 // Atualizar Preço Modal
 // ----------------------------
 function atualizarPrecoModal(produto, qtd) {
-  if (produto.precoPorKg) {
+    if (produto.precoPorKg) {
     modalPreco.innerHTML = `
-      <span class="modal-preco-info">Preço por Kg: R$ ${produto.precoPorKg.toFixed(2).replace('.', ',')}</span>
-      <span class="modal-preco-info">Quantidade: ${qtd} peça(s)</span>
-      <br>
-      <span class="modal-preco-aviso">Preço final após pesagem</span>
+     <div class="modal-preco-container">
+    <div class="linha-quantidade">
+      <div class="modal-preco-item quantidade">Quantidade: ${qtd} peça(s)</div>
+    </div>
+    <div class="linha-preco">
+      <div class="modal-preco-item preco-kg">Preço por Kg: R$ ${produto.precoPorKg.toFixed(2).replace('.', ',')}</div>
+      <div class="modal-preco-item preco-final aviso">Preço final após pesagem</div>
+    </div>
+  </div>
     `;
   } else if (produto.precoUnitario) {
     let unidade = (produto.vendidoPor === "unidade" && qtd > 1) ? "Unidades" : produto.vendidoPor;
