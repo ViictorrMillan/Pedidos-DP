@@ -731,8 +731,8 @@
   white-space: normal;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .item-preco-pequeno {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
