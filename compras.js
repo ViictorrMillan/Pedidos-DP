@@ -188,7 +188,7 @@ function atualizarPrecoModal(produto, qtd) {
   } else if (produto.precoUnitario) {
     let unidade = (produto.vendidoPor === "unidade" && qtd > 1) ? "unidades" : produto.vendidoPor;
     modalPreco.innerHTML = `
-      <span class="modal-preco-info">${qtd} ${unidade} por R$ ${(produto.precoUnitario * qtd).toFixed(2).replace('.', ',')}</span>
+      <span class="modal-preco-info">${qtd} ${qtd > 1 ? unidade : produto.vendidoPor} por R$ ${(produto.precoUnitario * qtd).toFixed(2).replace('.', ',')}</span>
     `;
   } else {
     modalPreco.innerHTML = `<span class="modal-preco-aviso">Preço após pesagem</span>`;
@@ -219,7 +219,7 @@ function atualizarCarrinho() {
 
     let precoInfo;
     if (item.precoPorKg) {
-      precoInfo = `<span class="item-preco">Preço após pesagem</span>`;
+      precoInfo = `<span class="item-preco item-preco-pequeno">Preço após pesagem</span>`;
     } else {
       precoInfo = `<span class="item-preco">R$ ${(item.precoUnitario * item.qtd).toFixed(2).replace('.', ',')}</span>`;
       total += item.precoUnitario * item.qtd;
@@ -250,9 +250,7 @@ function atualizarCarrinho() {
 
   totalEl.textContent = total.toFixed(2).replace('.', ',');
 
-  // Atualiza visibilidade do ícone
   atualizarIconeCarrinho();
-
   botaoFinal.style.display = carrinho.length ? "flex" : "none";
 }
 
