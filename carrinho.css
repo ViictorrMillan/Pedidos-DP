@@ -726,13 +726,13 @@
 
 /* Carrinho responsivo para preço após pesagem */
 .item-preco-pequeno {
-  font-size: 0.8rem;  /* menor no celular */
+  font-size: 1rem;  /* menor no celular */
   display: block;     /* quebra de linha */
   white-space: normal;
 }
 
 @media (max-width: 600px) {
   .item-preco-pequeno {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
