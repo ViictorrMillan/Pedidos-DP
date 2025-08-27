@@ -319,15 +319,25 @@
   font-weight: bold;
   text-align: center;
 }
-
 #modal-descricao {
-  font-size: 16px;
-  color: #555;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 10px;
   display: flex;
-  gap:10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+  color: #2c2c2c;
+}
+
+#modal-descricao div {
+  margin-bottom: 2px;
+  width: 50%;
+}
+
+
+#modal-descricao div strong {
+  display: inline-block;
+  color: #1b1b1b;
 }
 
 .quantidade-container {
@@ -691,7 +701,4 @@
 }
 
 }
-
-
-
 

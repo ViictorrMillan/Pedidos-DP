@@ -119,7 +119,7 @@ function renderizarProdutos() {
 }
 
 // ----------------------------
-// Modal
+// Modal (2 colunas)
 // ----------------------------
 function abrirModal(produto) {
   modalProduto = produto;
@@ -138,8 +138,9 @@ function abrirModal(produto) {
   addInfo("Peso Unidade", produto.pesoUn);
   addInfo("Peso Total", produto.pesoTotal);
   addInfo("Caixa com", produto.caixaCom);
+
   if (produto.descricao && produto.descricao.trim() !== "") {
-    modalSub.innerHTML += `<div>${produto.descricao}</div>`;
+    modalSub.innerHTML += `<div style="grid-column: span 2;">${produto.descricao}</div>`;
   }
 
   qtdInput.value = 1;
@@ -207,12 +208,17 @@ function atualizarCarrinho() {
           ${precoInfo}
         </div>
         <div class="item-controles">
-          <button class="mais" onclick="alterarQtd(${i}, 1)"><i class="fa fa-plus"></i></button>
-          <button class="menos" onclick="alterarQtd(${i}, -1)"><i class="fa fa-minus"></i></button>
-          <button class="remover" onclick="removerItem(${i})"><i class="fa fa-times"></i></button>
+          <button class="mais"><i class="fa fa-plus"></i></button>
+          <button class="menos"><i class="fa fa-minus"></i></button>
+          <button class="remover"><i class="fa fa-times"></i></button>
         </div>
       </div>
     `;
+
+    // Event listeners
+    li.querySelector(".mais").addEventListener("click", () => alterarQtd(i, 1));
+    li.querySelector(".menos").addEventListener("click", () => alterarQtd(i, -1));
+    li.querySelector(".remover").addEventListener("click", () => removerItem(i));
 
     lista.appendChild(li);
   });
@@ -220,6 +226,26 @@ function atualizarCarrinho() {
   totalEl.textContent = total.toFixed(2).replace('.', ',');
   botaoCarrinho.style.display = carrinho.length ? "flex" : "none";
   botaoFinal.style.display = carrinho.length ? "flex" : "none";
+}
+
+// ----------------------------
+// Funções do Carrinho
+// ----------------------------
+function alterarQtd(index, delta) {
+  if (carrinho[index]) {
+    carrinho[index].qtd += delta;
+    if (carrinho[index].qtd < 1) {
+      carrinho.splice(index, 1);
+    }
+    atualizarCarrinho();
+  }
+}
+
+function removerItem(index) {
+  if (carrinho[index]) {
+    carrinho.splice(index, 1);
+    atualizarCarrinho();
+  }
 }
 
 // ----------------------------
