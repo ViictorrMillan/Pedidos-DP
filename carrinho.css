@@ -719,6 +719,7 @@
 
 .linha-preco {
  gap: 10px;
- font-size: 14px;
+ font-size: 12px;
+ align-items: center;
 }
 }
