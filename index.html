@@ -72,50 +72,50 @@
 <!--! Formulário fixo no centro -->
 <main>
   <section class="dados-pessoais">
-    <h2>Insira os seus Dados</h2>
-    <form id="form-dados" novalidate>
-      <div class="form-grid">
-        <div>
-          <div class="input-group obrigatorio">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
-          </div>
-          <div class="input-group obrigatorio">
-            <label for="pizzaria">Pizzaria</label>
-            <input type="text" id="pizzaria" name="pizzaria" placeholder="Insira o nome da pizzaria" required>
-          </div>
-          <div class="input-group obrigatorio">
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="Somente números" pattern="[0-9]{11}" inputmode="numeric" required>
-          </div>
+  <h2>Insira os seus Dados</h2>
+  <form id="form-dados" novalidate>
+    <div class="form-grid">
+      <div>
+        <div class="input-group obrigatorio">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
         </div>
-        <div>
-          <div class="input-group">
-            <label for="endereco">Endereço</label>
-            <div class="endereco-numero">
-              <input type="text" id="endereco" name="endereco" placeholder="Rua, avenida, etc." class="logradouro">
-              <input type="text" id="numero" name="numero" placeholder="Nº" class="numero">
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" placeholder="Somente números" pattern="[0-9]{8}" inputmode="numeric">
-          </div>
-          <div class="input-group">
-            <label for="pagamento">Pagamento</label>
-            <select id="pagamento" name="pagamento">
-              <option value="">Selecione</option>
-              <option value="Dinheiro">Dinheiro</option>
-              <option value="Pix">Pix</option>
-              <option value="Cartão">Cartão</option>
-              <option value="Boleto">Boleto</option>
-            </select>
-          </div>
+        <div class="input-group obrigatorio">
+          <label for="pizzaria">Pizzaria</label>
+          <input type="text" id="pizzaria" name="pizzaria" placeholder="Insira o nome da pizzaria" required>
+        </div>
+        <div class="input-group obrigatorio">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" name="telefone" placeholder="Somente números" pattern="[0-9]{8,11}" minlength="8" maxlength="11" inputmode="numeric" required>
         </div>
       </div>
-      <button type="submit" class="btn-next">Iniciar Pedido!</button>
-    </form>
-  </section>
+      <div>
+        <div class="input-group">
+          <label for="endereco">Endereço</label>
+          <div class="endereco-numero">
+            <input type="text" id="endereco" name="endereco" placeholder="Rua, avenida, etc." class="logradouro">
+            <input type="text" id="numero" name="numero" placeholder="Nº" class="numero" pattern="[0-9]{1,5}" inputmode="numeric">
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" placeholder="Somente números" pattern="[0-9]{8}" minlength="8" maxlength="8" inputmode="numeric">
+        </div>
+        <div class="input-group">
+          <label for="pagamento">Pagamento</label>
+          <select id="pagamento" name="pagamento">
+            <option value="">Selecione</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Pix">Pix</option>
+            <option value="Cartão">Cartão</option>
+            <option value="Boleto">Boleto</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn-next">Iniciar Pedido!</button>
+  </form>
+</section>
 
  <section id="compras-container">
 <h2> Selecione seus produtos</h2>
@@ -177,7 +177,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="validar.js"></script>
 <script src="compras.js"></script>
 <script src="finalizar.js"></script>
 </body>

@@ -44,7 +44,7 @@ document.getElementById('form-dados').addEventListener('submit', function(e){
     const valor = el.value.trim();
     el.classList.remove('error');
 
-    if (!valor || (id === 'telefone' && !/^\d{11}$/.test(valor))) {
+    if (!valor || (id === 'telefone' && !/^\d{8,11}$/.test(valor))) {
       ok = false;
       el.classList.add('error');
       el.placeholder = msg;
@@ -85,3 +85,17 @@ function animate() {
 }
 
 animate();
+
+// Função para permitir somente números
+function permitirSomenteNumeros(input) {
+  input.addEventListener("input", () => {
+    input.value = input.value.replace(/\D/g, ""); // remove tudo que não for número
+  });
+}
+
+// Campos numéricos
+["telefone", "cep", "numero"].forEach(id => {
+  const campo = document.getElementById(id);
+  if (campo) permitirSomenteNumeros(campo);
+});
+

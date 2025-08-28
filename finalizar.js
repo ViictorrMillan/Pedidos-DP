@@ -1,6 +1,6 @@
 // Finalizar pedido via WhatsApp
 document.getElementById("carrinho-final").addEventListener("click", () => {
-  if(carrinho.length === 0) {
+  if (carrinho.length === 0) {
     alert("O carrinho está vazio!");
     return;
   }
@@ -14,33 +14,48 @@ document.getElementById("carrinho-final").addEventListener("click", () => {
   const cep = document.getElementById("cep").value.trim();
   const pagamento = document.getElementById("pagamento").value;
 
-  // Montar resumo do carrinho
-  let resumo = carrinho.map(item => {
-    return `${item.nome} - ${item.qtd} ${item.vendidoPor === "KG" ? "Kg" : "unidade"} - R$ ${(item.preco * item.qtd).toFixed(2).replace('.', ',')}`;
+  // Função auxiliar para saber o preço
+  function getPreco(item) {
+    return typeof item.precoUnitario === "number" ? item.precoUnitario : null;
+  }
+
+  // Separar produtos
+  const comPreco = carrinho.filter(item => getPreco(item));
+  const semPreco = carrinho.filter(item => !getPreco(item));
+
+  // Montar resumo dos que têm preço
+  const resumoComPreco = comPreco.map(item => {
+    const preco = getPreco(item) * item.qtd;
+    return `• ${item.nome} - ${item.qtd} ${item.vendidoPor === "KG" ? "Kg" : "unidade"} - R$ ${preco.toFixed(2).replace('.', ',')}`;
   }).join("\n");
 
-  // Montar mensagem completa
+  // Montar resumo dos sem preço
+  const resumoSemPreco = semPreco.map(item => {
+    return `• ${item.nome} - ${item.qtd} ${item.vendidoPor === "KG" ? "Kg" : "unidade"} - *Valor após pesagem*`;
+  }).join("\n");
+
+  // Calcular total apenas dos com preço
+  const total = comPreco.reduce((t, item) => t + getPreco(item) * item.qtd, 0);
+
+  // Mensagem para WhatsApp
   const mensagem = `
 Olá, quero fazer um pedido:
 
 *Dados do cliente*
-Nome: ${nome}
-Pizzaria: ${pizzaria}
-Telefone: ${telefone}
-Endereço: ${endereco} Nº ${numero}
-CEP: ${cep}
-Pagamento: ${pagamento}
+👤 Nome: ${nome}
+🏪 Pizzaria: ${pizzaria}
+📞 Telefone: ${telefone}
+📍 Endereço: ${endereco} Nº ${numero}
+📮 CEP: ${cep}
+💳 Pagamento: ${pagamento}
 
-*Pedido*
-${resumo}
+${resumoComPreco ? `*Produtos com preço definido:*\n${resumoComPreco}` : ""}
+${resumoSemPreco ? `\n*Produtos a pesar (valor após pesagem):*\n${resumoSemPreco}` : ""}
 
-*Total:* R$ ${carrinho.reduce((t, item) => t + item.preco*item.qtd, 0).toFixed(2).replace('.', ',')}
+${resumoComPreco ? `\n*Total (produtos com preço):* R$ ${total.toFixed(2).replace('.', ',')}` : ""}
   `;
 
-  // URL encode para WhatsApp
-  const numeroWhats = "5511982688488"; // coloque o número do WhatsApp da pizzaria
+  const numeroWhats = "5511982688488"; // número do WhatsApp
   const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`;
-
-  // Abrir WhatsApp
   window.open(url, "_blank");
 });
