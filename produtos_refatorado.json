@@ -419,7 +419,7 @@
     "codigo": "027",
     "nome": "Caixa de Milho Verde Lata 24x170g Quero",
     "imagem": "/images/produtos/milho_verde_lata_quero.png",
-    "categoria": "Verduras e Hortifruti",
+    "categoria": "Conservas",
     "subcategoria": "Caixas",
     "precoUnitario": 89.8,
     "precoPorKg": "",
@@ -435,7 +435,7 @@
     "codigo": "028",
     "nome": "Caixa de Ervilha Lata 24x170g Olé",
     "imagem": "/images/produtos/ervilha_lata_ole.png",
-    "categoria": "Verduras e Hortifruti",
+    "categoria": "Conservas",
     "subcategoria": "Caixas",
     "precoUnitario": 69.8,
     "precoPorKg": "",
@@ -451,7 +451,7 @@
     "codigo": "029",
     "nome": "Caixa de Palmito Açai 12x500g GAVI",
     "imagem": "/images/produtos/palmito.png",
-    "categoria": "Verduras e Hortifruti",
+    "categoria": "Conservas",
     "subcategoria": "Caixas",
     "precoUnitario": 245.0,
     "precoPorKg": "",
@@ -1014,7 +1014,7 @@
     "categoria": "Carnes e Embutidos",
     "subcategoria": "",
     "precoUnitario": "",
-    "precoPorKg": 1.0,
+    "precoPorKg": 21.8,
     "promocao": false,
     "vendidoPor": "peça",
     "marca": "Aurora",
@@ -1217,7 +1217,7 @@
   },
   {
     "codigo": "077",
-    "nome": "Saco Plástico Picotado Reforçado 30x40 Bobina com 600 Sacos",
+    "nome": "Saco Plástico Picotado Reforçado 40x60cm Bobina com 300 Sacos",
     "imagem": "/images/produtos/bobina_saco.png",
     "categoria": "Utilidades",
     "subcategoria": "",
@@ -1228,20 +1228,20 @@
     "marca": "",
     "pesoUn": "",
     "pesoTotal": "",
-    "caixaCom": "",
-    "descricao": "Suporta até 4kg"
+    "caixaCom": "300 Sacos",
+    "descricao": "Suporta até 6kg"
   },
   {
     "codigo": "078",
-    "nome": "Bobina Saco pequeno",
-    "imagem": "/images/produtos/bobina_saco_peq.png",
+    "nome": "Bobina Saco Plástico Picotada 30x40cm Flex Bag",
+    "imagem": "/images/produtos/bobina_saco_3040.png",
     "categoria": "Utilidades",
     "subcategoria": "",
-    "precoUnitario": 12.0,
+    "precoUnitario": 45.0,
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
-    "marca": "",
+    "marca": "Flex Bag",
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "",
@@ -1276,7 +1276,7 @@
     "marca": "Paraná",
     "pesoUn": "",
     "pesoTotal": "",
-    "caixaCom": "10 cx com 40 unidades cada",
+    "caixaCom": "10 caixas com 40 unidades cada",
     "descricao": ""
   },
   {
@@ -1297,7 +1297,7 @@
   },
   {
     "codigo": "084",
-    "nome": "Caixa de Papel Toalha Isapel",
+    "nome": "Toalhas de papel Interfolhadas - 1000 unidades",
     "imagem": "/images/produtos/caixa_papel_toalha.png",
     "categoria": "Utilidades",
     "subcategoria": "",
@@ -1305,11 +1305,11 @@
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
-    "marca": "Isapel",
+    "marca": "Exellence Paper",
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "5 unidades",
-    "descricao": "Cada unidade vem com um pacote com 1000 unidades, de 22 x 20,5cm cada folha."
+    "descricao": "Cada unidade conta com 1000 Folhas de 22 x 20,5cm"
   },
   {
     "codigo": "085",
@@ -1345,7 +1345,7 @@
   },
   {
     "codigo": "087",
-    "nome": "Vassoura Original Noviça Concept Bettanin",
+    "nome": "Vassoura",
     "imagem": "/images/produtos/vassoura.png",
     "categoria": "Utilidades",
     "subcategoria": "",
@@ -1353,11 +1353,11 @@
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
-    "marca": "",
+    "marca": "Marcas variadas",
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "",
-    "descricao": "Uma vassoura de excelência é aquela que consegue alcançar os lugares mais difíceis e capturar as menores partículas de sujeira possíveis."
+    "descricao": ""
   },
   {
     "codigo": "088",
@@ -1369,11 +1369,11 @@
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
-    "marca": "",
+    "marca": "Marcas variadas",
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "",
-    "descricao": "1 Unidade Rodo Para Limpeza Duplo Eva Grande 60Cm Puxa E Seca Banheiro Multiuso Com Cabo de 1,20m"
+    "descricao": ""
   },
   {
     "codigo": "089",
@@ -1389,7 +1389,7 @@
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "",
-    "descricao": "Feita em chapa galvanizada com cabo de madeira revestido de 60cm. Marca: triângulo"
+    "descricao": ""
   },
   {
     "codigo": "090",
@@ -1409,7 +1409,7 @@
   },
   {
     "codigo": "099",
-    "nome": "Envelope",
+    "nome": "Envelope para Pizza 37x25cm – Pacote com 250 Unidades",
     "imagem": "/images/produtos/envelope.png",
     "categoria": "Utilidades",
     "subcategoria": "",
@@ -1420,12 +1420,12 @@
     "marca": "",
     "pesoUn": "",
     "pesoTotal": "",
-    "caixaCom": "",
-    "descricao": ""
+    "caixaCom": "250 unidades",
+    "descricao": "Envelope para pizza 37x25cm, pacote com 250 unidades."
   },
   {
     "codigo": "100",
-    "nome": "Caixa de Bobina Fiscal",
+    "nome": "Caixa de Bobina de Papel Fiscal 30 unidades",
     "imagem": "/images/produtos/bobinaFiscal.png",
     "categoria": "Utilidades",
     "subcategoria": "",
@@ -1433,7 +1433,7 @@
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
-    "marca": "",
+    "marca": "Marcas variadas",
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "30 unidades",
@@ -1545,7 +1545,7 @@
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
-    "marca": "",
+    "marca": "Marcas variadas",
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "",
@@ -1616,22 +1616,6 @@
     "descricao": "Tamanho 18"
   },
   {
-    "codigo": "112",
-    "nome": "Papel Toalha",
-    "imagem": "/images/produtos/papel-toalha.png",
-    "categoria": "Utilidades",
-    "subcategoria": "",
-    "precoUnitario": 73.5,
-    "precoPorKg": "",
-    "promocao": false,
-    "vendidoPor": "unidade",
-    "marca": "",
-    "pesoUn": "",
-    "pesoTotal": "",
-    "caixaCom": "",
-    "descricao": ""
-  },
-  {
     "codigo": "114",
     "nome": "Luva Nitrílica Sem Pó Caixa c/100 Unidades Azul",
     "imagem": "/images/produtos/caixa-de-luva-m.png",
@@ -1665,7 +1649,7 @@
   },
   {
     "codigo": "123",
-    "nome": "Durex",
+    "nome": "Kit 13 Rolos Fita Adesiva Cristal Fit-Pel 18mm x 50m",
     "imagem": "/images/produtos/durex.png",
     "categoria": "Utilidades",
     "subcategoria": "",
@@ -1677,52 +1661,20 @@
     "pesoUn": "",
     "pesoTotal": "",
     "caixaCom": "",
-    "descricao": ""
+    "descricao": "13 Rolos de 18mm x 50m"
   },
-  {
-    "codigo": "136",
-    "nome": "Caixa de Tomate",
-    "imagem": "/images/produtos/caixa_tomate.png",
-    "categoria": "Verduras e Hortifruti",
+   {
+    "codigo": "123",
+    "nome": "Caixa de Chicharro Ralado Lata 410g Santa Rita 24x410g",
+    "imagem": "/images/produtos/chicharro_ralado_santa_rita.png",
+    "categoria": "Utilidades",
     "subcategoria": "",
-    "precoUnitario": 20.0,
+    "precoUnitario": 13.50,
     "precoPorKg": "",
     "promocao": false,
     "vendidoPor": "unidade",
     "marca": "",
-    "pesoUn": "",
-    "pesoTotal": "",
-    "caixaCom": "",
-    "descricao": ""
-  },
-  {
-    "codigo": "139",
-    "nome": "Caixa de Morango",
-    "imagem": "/images/produtos/caixa_morango.png",
-    "categoria": "Verduras e Hortifruti",
-    "subcategoria": "",
-    "precoUnitario": 20.0,
-    "precoPorKg": "",
-    "promocao": false,
-    "vendidoPor": "unidade",
-    "marca": "",
-    "pesoUn": "",
-    "pesoTotal": "",
-    "caixaCom": "",
-    "descricao": ""
-  },
-  {
-    "codigo": "144",
-    "nome": "Escarola",
-    "imagem": "/images/produtos/escarola.png",
-    "categoria": "Verduras e Hortifruti",
-    "subcategoria": "",
-    "precoUnitario": 20.0,
-    "precoPorKg": "",
-    "promocao": false,
-    "vendidoPor": "unidade",
-    "marca": "",
-    "pesoUn": "",
+    "pesoUn": "410g",
     "pesoTotal": "",
     "caixaCom": "",
     "descricao": ""
